@@ -18,7 +18,7 @@ const Home = () => {
           <span className="text-[#3D9239] font-bold"> MERN Stack </span>.
         </p>
         <Link
-          to="#"
+          to="https://drive.google.com/file/d/1VvZ9AQ5Pk_64wWEnRAx0WYTkl8QX7P0v/view?usp=sharing"
           target="_blank"
         >
           <button className="border-[#3D9239] border-2 items-center  flex w-fit px-4 py-2 rounded-xl hover:border-pink-600 transition-all duration-500 text-[#ccd6f6]">
