@@ -21,7 +21,7 @@ const About = () => {
           <div className="text-start">
             <p>
               I am a fullstack web developer . I'm
-              pursuing masters in web development from woolf university
+              pursuing masters in computer science:software engineering from woolf university
             </p>
             <p>
               I developed an interest in Web Development and started
