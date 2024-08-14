@@ -4,7 +4,6 @@ import { data } from "../data/data.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Work = () => {
-  const project = data;
   const [showIntro, setShowIntro] = useState(-1);
 
   const handleMouseEnter = (index) => {
@@ -33,28 +32,28 @@ const Work = () => {
           infiniteLoop={true}
           showArrows={false}
           showStatus={false}
-          stopOnHover={true}
+          stopOnHover={false}
         >
-          {project.map((item, index) => (
+          {data.map((item, index) => (
             <div
               key={index}
               className="container pb-12 mx-auto flex justify-center items-center relative content-div shadow-lg rounded-md group"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
-              <div className={`intro${showIntro === index ? " visible" : ""}`}>
+              {showIntro === index && (
                 <div className="absolute w-full h-20 translate-y-full bg-black opacity-80 flex items-center justify-center">
                   <div className="text-white text-center mx-4">
                     {item.intro}
                   </div>
                 </div>
-              </div>
+              )}
               <div className="opacity-100">
                 <div className="h-80 md:h-96 pb-8">
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="object-cover w-full  rounded-xl h-full"
+                    className="object-cover w-full rounded-xl h-full"
                   />
                 </div>
                 <span className="text-2xl font-bold text-white tracking-wider">
